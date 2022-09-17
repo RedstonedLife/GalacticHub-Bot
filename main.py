@@ -92,6 +92,10 @@ class Bot(commands.Bot):
         pass
 
     def _setup_databases(self):
+        if os.path.exists(f"data/databases/"):
+            pass
+        else:
+            os.mkdir("data/databases")
         for database in databaseData['databases']:
             if os.path.exists(f"data/databases/{database}{databaseData['file_extension']}"):
                 pass
