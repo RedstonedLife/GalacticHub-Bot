@@ -14,11 +14,13 @@ class Weebsh(commands.Cog):
     @commands.hybrid_command(pass_context=True, description="Awe ;(. Here lemme hug you!")
     @commands.cooldown(1, 3, commands.BucketType.user)
     async def cry(self, ctx):
-        u = self.req.cry()[0]
+        u = self.req.cry()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('sEmote', 'cry', ctx.message.author, None, True).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('sEmote', 'cry', ctx.message.author, None, True).__message__(), url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Hug somebody!")
@@ -27,11 +29,13 @@ class Weebsh(commands.Cog):
         if not member or member == ctx.message.author:
             mes = WeebyMessages('uEmote', 'hug', ctx.message.author, None, True).__message__()
             return await ctx.send(mes)
-        u = self.req.hug()[0]
+        u = self.req.hug()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('uEmote', 'hug', ctx.message.author, member, False).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('uEmote', 'hug', ctx.message.author, member, False).__message__(), url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Mwah!")
@@ -40,11 +44,13 @@ class Weebsh(commands.Cog):
         if not member or member == ctx.message.author:
             mes = WeebyMessages('uEmote', 'kiss', ctx.message.author, None, True).__message__()
             return await ctx.send(mes)
-        u = self.req.kiss()[0]
+        u = self.req.kiss()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('uEmote', 'kiss', ctx.message.author, member, False).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('uEmote', 'kiss', ctx.message.author, member, False).__message__(), url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Cuddle someone!")
@@ -53,11 +59,13 @@ class Weebsh(commands.Cog):
         if not member or member == ctx.message.author:
             mes = WeebyMessages('uEmote', 'cuddle', ctx.message.author, None, True).__message__()
             return await ctx.send(mes)
-        u = self.req.cuddle()[0]
+        u = self.req.cuddle()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('uEmote', 'cuddle', ctx.message.author, member, False).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('uEmote', 'cuddle', ctx.message.author, member, False).__message__(), url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Slap someone! (How dareth thou!?)")
@@ -66,18 +74,23 @@ class Weebsh(commands.Cog):
         if not member or member == ctx.message.author:
             mes = WeebyMessages('uEmote', 'slap', ctx.message.author, None, True).__message__()
             return await ctx.send(mes)
-        u = self.req.slap()[0]
+        u = self.req.slap()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('uEmote', 'slap', ctx.message.author, member, False).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('uEmote', 'slap', ctx.message.author, member, False).__message__(),
+                         url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Kermit the frog!")
     @commands.cooldown(1, 60, commands.BucketType.user)
     async def kermit(self, ctx):
-        u = self.req.kermit()[0]
-        embed = discord.Embed(color=0xf3f3f3).set_image(url=u)
+        u = self.req.kermit()
+        embed = discord.Embed(color=0xf3f3f3).set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Pet someone :)")
@@ -86,21 +99,25 @@ class Weebsh(commands.Cog):
         if not member or member == ctx.message.author:
             mes = WeebyMessages('uEmote', 'pat', ctx.message.author, None, True).__message__()
             return await ctx.send(mes)
-        u = self.req.pat()[0]
+        u = self.req.pat()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('uEmote', 'pat', ctx.message.author, member, False).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('uEmote', 'pat', ctx.message.author, member, False).__message__(), url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description=":< | Why Are You Pouting")
     @commands.cooldown(1, 3, commands.BucketType.user)
     async def pout(self, ctx):
-        u = self.req.pout()[0]
+        u = self.req.pout()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('sEmote', 'pout', ctx.message.author, None, True).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('sEmote', 'pout', ctx.message.author, None, True).__message__(), url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Tickle somebody!")
@@ -109,11 +126,13 @@ class Weebsh(commands.Cog):
         if not member or member == ctx.message.author:
             mes = WeebyMessages('uEmote', 'tickle', ctx.message.author, None, True).__message__()
             return await ctx.send(mes)
-        u = self.req.tickle()[0]
+        u = self.req.tickle()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('uEmote', 'tickle', ctx.message.author, member, False).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('uEmote', 'tickle', ctx.message.author, member, False).__message__(), url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Stare at someone O_O")
@@ -122,11 +141,13 @@ class Weebsh(commands.Cog):
         if not member or member == ctx.message.author:
             mes = WeebyMessages('uEmote', 'stare', ctx.message.author, None, True).__message__()
             return await ctx.send(mes)
-        u = self.req.stare()[0]
+        u = self.req.stare()
         embed = discord.Embed(color=0xf3f3f3)
-        embed.set_author(name=WeebyMessages('uEmote', 'stare', ctx.message.author, member, False).__message__(), url=u,
+        embed.set_author(name=WeebyMessages('uEmote', 'stare', ctx.message.author, member, False).__message__(), url=u[0],
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
-        embed.set_image(url=u)
+        embed.set_image(url=u[0])
+        if self.bot.debugMode:
+            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
         await ctx.send(embed=embed)
 
 
