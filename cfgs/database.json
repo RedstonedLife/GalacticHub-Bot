@@ -1,0 +1,21 @@
+{
+  "file_extension": ".db",
+  "engine": "sqlite",
+  "databases": [
+    "moderation_users",
+    "moderation_channels",
+    "analytics_users",
+    "analytics_channels",
+    "analytics_guild",
+    "analytics_users_timestamp",
+    "analytics_channels_timestamp",
+    "analytics_guild_timestamp",
+    "analytics_users_link",
+    "analytics_channels_link",
+    "analytics_guild_link",
+    "users",
+    "tickets",
+    "forms",
+    "games"
+  ]
+}

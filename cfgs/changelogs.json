@@ -1,0 +1,15 @@
+{
+  "changelogs": {
+    "22w37a01v": {
+      "title": "Update 22w37a01v",
+      "release_data": 1663417330,
+      "description": "The **beginning** of something **big!**\n\nThis update might not add a lot of features but it paves the road\nfor a bigger update!",
+      "fields": [
+        {"inline": true,"name": "Update\nAuthor", "value": "<@!292016137926082560>"},
+        {"inline": false, "name": "Commands", "value": "`info` - Displays bot info (**duh..**)\n`cookie` - You want a cookie? Or do you want to give your friends one? :)\n`8ball` - Ask the mysterious 8ball a question your heart desires!\n`cake` - It's a :sparkles: surprise :sparkles: !\n`cry` - Lemme hug you!\n`hug` - Its okay!\n`kiss` - mwah!\n`cuddle` - This one is special, because it is something I will never have :_)\n`slap` - How dareth thou!\n`kermit` - Do I need to explain?\n`pat` - You look extra cute today!\n`pout` - :pouting_cat:\n`tickle` - You're so ticklish\n`stare` - o_o"},
+        {"inline": false, "name": "Features", "value": "Added support for `weeb.sh` based commands.\nPartial support for slash commands (only `8ball` & `cookie` for now are supported)"},
+        {"inline": false, "name": "Update Age", "value": "<t:1663417330:R>"}
+      ]
+    }
+  }
+}
