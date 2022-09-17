@@ -6,4 +6,5 @@ class Datatype(Enum):
     STRING = "TEXT"
     BLOB = "BLOB"
     NUMERIC = "NUMERIC"
+    REAL = "REAL"
 
