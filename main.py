@@ -13,6 +13,10 @@ from utilities.Constants import *
 
 
 def initLogger() -> logging.Logger:
+    if os.path.exists("logs/"):
+        pass
+    else:
+        os.mkdir("logs/")
     lg = logging.getLogger("GLHUB_LOG")
     lg.setLevel(logging.DEBUG)
     handler = logging.FileHandler(
