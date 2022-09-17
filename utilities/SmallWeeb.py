@@ -44,99 +44,99 @@ class Request:
     def cry(self):
         before = time.monotonic()
         self.data = self.request_send("cry").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def cuddle(self):
         before = time.monotonic()
         self.data = self.request_send("cuddle").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def hug(self):
         before = time.monotonic()
         self.data = self.request_send("hug").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def kiss(self):
         before = time.monotonic()
         self.data = self.request_send("kiss").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def lewd(self):
         before = time.monotonic()
         self.data = self.request_send("lewd").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def lick(self):
         before = time.monotonic()
         self.data = self.request_send("lick").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def nom(self):
         before = time.monotonic()
         self.data = self.request_send("nom").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def nyan(self):
         before = time.monotonic()
         self.data = self.request_send("nyan").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def owo(self):
         before = time.monotonic()
         self.data = self.request_send("owo").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def pat(self):
         before = time.monotonic()
         self.data = self.request_send("pat").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def pout(self):
         before = time.monotonic()
         self.data = self.request_send("pout").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def rem(self):
         before = time.monotonic()
         self.data = self.request_send("rem").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def slap(self):
         before = time.monotonic()
         self.data = self.request_send("slap").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def smug(self):
         before = time.monotonic()
         self.data = self.request_send("smug").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def stare(self):
         before = time.monotonic()
         self.data = self.request_send("stare").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def tickle(self):
         before = time.monotonic()
         self.data = self.request_send("tickle").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def triggered(self):
         before = time.monotonic()
         self.data = self.request_send("triggered").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def nsfw_gtn(self):
         before = time.monotonic()
         self.data = self.request_send("nsfw-gtn", True).json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def potato(self):
         before = time.monotonic()
         self.data = self.request_send("potato").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]
 
     def kermit(self):
         before = time.monotonic()
         self.data = self.request_send("kermit").json()
-        return [self.return_image(), round((time.monotonic() - before) * 1000)]
+        return [self.return_image(), (time.monotonic() - before) * 1000]

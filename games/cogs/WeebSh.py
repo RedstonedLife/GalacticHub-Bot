@@ -20,7 +20,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"Took {u[1]}s")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Hug somebody!")
