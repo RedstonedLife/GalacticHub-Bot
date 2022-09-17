@@ -96,11 +96,13 @@ class Bot(commands.Bot):
         for file in os.listdir("data/emojis/"):
             try:
                 emoji_id = get(guild.emojis, name=file[:-4])
-                print(emoji_id)
-                with open(f"data/emojis/{file}", "rb") as img:
-                    await guild.create_custom_emoji(name=file[:-4], image=img.read())
-                    img.close()
-                    print(f"Added Emoji {file[:-4]}")
+                if not emoji_id:
+                    with open(f"data/emojis/{file}", "rb") as img:
+                        await guild.create_custom_emoji(name=file[:-4], image=img.read())
+                        img.close()
+                        print(f"Added Emoji {file[:-4]}")
+                else:
+                    print(f"Did not add Emoji :{file[:-4]}: because it already exists")
             except Exception:
                 logger.exception(f"Failed to add emoji {file}")
 
