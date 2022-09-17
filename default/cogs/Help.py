@@ -28,7 +28,7 @@ class Help(commands.Cog):
         embed = discord.Embed(title=f"Galactic Hub Bot", color=COLOR, timestamp=discord_timestamp())
         embed.set_thumbnail(url=ME_AVATAR)
         embed.add_field(name="Version ", value=f"`{self.bot.version}`", inline=True)
-        embed.add_field(name="Author", value="<@!292016137926082560>", inline=True)
+        embed.add_field(name="Author", value="<@!292016137926082560>\n<@!927207732002586674>", inline=True)
         embed.add_field(name="Prefix", value=f"`{self.bot.command_prefix}`", inline=True)
         #thanks_string = ""
         #for tAr in self.bot.thanks:

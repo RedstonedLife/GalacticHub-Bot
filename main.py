@@ -92,8 +92,17 @@ class Bot(commands.Bot):
         self.elist = None
         self.synced = False
 
-    def _load_emojis(self):
-        pass
+    async def _load_emojis(self, guild: discord.Guild):
+        for file in os.listdir("data/emojis/"):
+            try:
+                emoji_id = get(guild.emojis, name=file[:-4])
+                print(emoji_id)
+                with open(f"data/emojis/{file}", "rb") as img:
+                    await guild.create_custom_emoji(name=file[:-4], image=img.read())
+                    img.close()
+                    print(f"Added Emoji {file[:-4]}")
+            except Exception:
+                logger.exception(f"Failed to add emoji {file}")
 
     def _setup_databases(self):
         if os.path.exists(f"data/databases/"):
@@ -113,14 +122,7 @@ class Bot(commands.Bot):
 
     async def on_guild_join(self, guild: discord.Guild):
         await self.wait_until_ready()
-        for file in os.listdir("data/emojis/"):
-            try:
-                with open(f"data/emojis/{file}", "rb") as img:
-                    await guild.create_custom_emoji(name=file[:-4], image=img.read())
-                    img.close()
-                    print(f"Added Emoji {file[:-4]}")
-            except Exception:
-                logger.exception(f"Failed to add emoji {file}")
+        await self._load_emojis(guild)
 
     async def on_command_error(self, context: commands.Context, exception: commands.CommandError) -> None:
         if isinstance(exception, commands.CommandNotFound):
@@ -172,6 +174,8 @@ class Bot(commands.Bot):
 
     async def on_ready(self):
         self.elist = {e.name: str(e) for e in self.emojis}
+        for guild in self.guilds:
+            await self._load_emojis(guild=guild)
         print("Bot is ready to engage!")
         if not self.synced:
             await self.tree.sync()

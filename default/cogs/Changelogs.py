@@ -36,7 +36,7 @@ class Changelogs(commands.Cog):
         for field_dict in self.clgData['changelogs'][version]['fields']:
             tmpDict = dict(field_dict)
             embed.add_field(name=tmpDict['name'], value=tmpDict['value'], inline=tmpDict['inline'])
-        embed.set_footer(text="Made By RedstonedLife#9229 & LydiaLovelace#4444 With ❤ From Israel & U.S.A", icon_url=RED_AVATAR)
+        embed.set_footer(text="Made By RedstonedLife#9229 & LydiaLovelace#4444 With ❤ From Israel & U.S.A", icon_url=ME_AVATAR)
         return embed
 
     """
