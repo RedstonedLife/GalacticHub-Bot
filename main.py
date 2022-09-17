@@ -73,7 +73,7 @@ databaseData = initdbConfig()
 
 
 class Bot(commands.Bot):
-    __slots__ = ("modules", "bot_id", "script_start_dt", "authors_id", "version", "elist")
+    __slots__ = ("modules", "bot_id", "script_start_dt", "authors_id", "version", "elist", "debugMode")
 
     def __init__(self, *args, loop=None, **kwargs):
         super().__init__(
@@ -90,7 +90,11 @@ class Bot(commands.Bot):
         self.authors_id = botData['authors-id']
         self.version = botData['version']
         self.elist = None
+        self.debugMode = False
         self.synced = False
+
+    def debug(self):
+        self.debugMode = True
 
     async def _load_emojis(self, guild: discord.Guild):
         for file in os.listdir("data/emojis/"):

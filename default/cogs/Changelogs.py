@@ -36,7 +36,8 @@ class Changelogs(commands.Cog):
         for field_dict in self.clgData['changelogs'][version]['fields']:
             tmpDict = dict(field_dict)
             embed.add_field(name=tmpDict['name'], value=tmpDict['value'], inline=tmpDict['inline'])
-        embed.set_footer(text="Made By RedstonedLife#9229 & LydiaLovelace#4444 With ❤ From Israel & U.S.A", icon_url=ME_AVATAR)
+        embed.set_footer(text="Made By RedstonedLife#9229 & LydiaLovelace#4444 With ❤ From Israel & U.S.A",
+                         icon_url=ME_AVATAR)
         return embed
 
     """
@@ -51,7 +52,8 @@ class Changelogs(commands.Cog):
         if version not in self.versions():
             return await interaction.response.send_message(f"{interaction.user.mention}, Oops!. I couldn't find the "
                                                            f"version you were looking "
-                                  f"for (`{version}`)\nAvailable versions: {','.join(self.versions())}", ephemeral=True)
+                                                           f"for (`{version}`)\nAvailable versions: {','.join(self.versions())}",
+                                                           ephemeral=True)
         await interaction.response.send_message(embed=self.create_embed(version), ephemeral=True)
 
     """

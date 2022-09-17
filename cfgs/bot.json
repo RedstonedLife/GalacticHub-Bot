@@ -4,6 +4,7 @@
   "bot-id": 1020670002401128500,
   "prefix": "gh.",
   "modules": [
+    "debug",
     "analytics",
     "bump",
     "default",
