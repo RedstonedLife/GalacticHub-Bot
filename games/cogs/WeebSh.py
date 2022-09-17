@@ -20,7 +20,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {u[1]}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Hug somebody!")
@@ -35,7 +35,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Mwah!")
@@ -50,7 +50,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Cuddle someone!")
@@ -65,7 +65,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Slap someone! (How dareth thou!?)")
@@ -81,7 +81,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Kermit the frog!")
@@ -90,7 +90,7 @@ class Weebsh(commands.Cog):
         u = self.req.kermit()
         embed = discord.Embed(color=0xf3f3f3).set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Pet someone :)")
@@ -105,7 +105,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description=":< | Why Are You Pouting")
@@ -117,7 +117,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Tickle somebody!")
@@ -132,7 +132,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
     @commands.hybrid_command(pass_context=True, description="Stare at someone O_O")
@@ -147,7 +147,7 @@ class Weebsh(commands.Cog):
                          icon_url=ctx.message.author.display_avatar if not ctx.message.author.guild_avatar else ctx.message.author.guild_avatar)
         embed.set_image(url=u[0])
         if self.bot.debugMode:
-            embed.set_footer(text=f"Took {'{}.2f'.format(u[1])}s")
+            embed.set_footer(text=f"DEBUG: Fetch Time: {'{:.3f}'.format(u[1]/1000)} seconds")
         await ctx.send(embed=embed)
 
 
