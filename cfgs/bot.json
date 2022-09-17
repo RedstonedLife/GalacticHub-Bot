@@ -1,4 +1,15 @@
 {
   "version": "22w37a",
-  "authors": [292016137926082560,927207732002586674]
+  "authors-id": [292016137926082560,927207732002586674],
+  "bot-id": 1020670002401128500,
+  "prefix": "gh.",
+  "modules": [
+    "analytics",
+    "bump",
+    "default",
+    "forms",
+    "games",
+    "interactables",
+    "moderation"
+  ]
 }
