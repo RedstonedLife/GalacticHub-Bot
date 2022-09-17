@@ -8,6 +8,7 @@ __pycache__/
 # Do not upload tokens!, default tokens.json can be found on github
 cfgs/tokens.*
 cfgs/bot.*
+data/databases/*.db
 # Distribution / packaging
 .Python
 env/
