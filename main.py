@@ -118,7 +118,7 @@ class Bot(commands.Bot):
                 try:
                     sqlite3.connect(f"data/databases/{database}{databaseData['file_extension']}").close()
                     print(f"Created data/databases/{database}{databaseData['file_extension']}")
-                    logger.info("Created data/databases/{database}{databaseData['file_extension']}")
+                    logger.info(f"Created data/databases/{database}{databaseData['file_extension']}")
                 except sqlite3.Error:
                     print("Failed")
 
