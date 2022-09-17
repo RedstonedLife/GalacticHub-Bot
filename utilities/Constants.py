@@ -7,8 +7,7 @@ ERROR_COLOR = 0xff0f16
 DISCORD_LIMIT = 2 ** 11 # 2048
 MAX_SIZE_FIELD_VALUE = 2 ** 10 # 1024
 MAX_MAX_SIZE_FIELD_VALUE = 5000 # max embed size
-RED_AVATAR = "https://cdn.discordapp.com/avatars/292016137926082560/0430b1200b0053a02e47e6211aee611a.webp"
-
+ME_AVATAR = "https://cdn.discordapp.com/icons/927754329035780137/a_634e8eae8c4f15d8a988b2bf17f41ce7.gif"
 # APIS
 USER_AGENT = {'User-Agent': 'Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/73.0'}
 MAX_RETRIES = 10
